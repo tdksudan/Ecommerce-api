@@ -25,7 +25,7 @@ connectDB();
 app.get("/",(req,res)=>{
     res.send("E-commerce API is running...");
 })
-
+app.use("/api/users",userRoute)
 //Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server is runnign on port ${PORT}`));
